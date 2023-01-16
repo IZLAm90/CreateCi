@@ -12,10 +12,18 @@ private val DarkColorPalette = darkColors(
     secondary = Teal200
 )
 
+private val PatientColorPalette = darkColors(
+    primary = Patiant,
+    primaryVariant = patiantBack,
+    secondary = patiantBack
+)
 private val LightColorPalette = lightColors(
-    primary = Purple500,
-    primaryVariant = Purple700,
-    secondary = Teal200
+    primary = patiantBack,
+    primaryVariant = patiantBar,
+    secondary =Teal200 ,
+    background = patiantBack,
+    surface = Patiant,
+
 
     /* Other default colors to override
     background = Color.White,

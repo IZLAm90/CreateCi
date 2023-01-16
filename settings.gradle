@@ -14,3 +14,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "CiCdProjectOne"
 include ':app'
+//include ':oppwa.mobile'
+//apply from: file("C:/Users/islam/AndroidStudioProjects/CiCdProjectOne/app");
+//applyNativeModulesSettingsGradle(settings)
