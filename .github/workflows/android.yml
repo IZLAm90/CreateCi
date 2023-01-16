@@ -1,0 +1,49 @@
+# Name of your workflow
+name: Android Build and Deployment Pipeline
+# Define on which Github event, workflow will trigger
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  build:
+    name: build SDk
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code to specific branch
+        uses: actions/checkout@v2
+        with:
+          ref: 'master'
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'zulu'
+          java-version: '11'
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v2
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+      - name: Build debug apk
+        run: ./gradlew assembleDebug --stacktrace
+
+      - name: Upload debug apk
+        uses: actions/upload-artifact@v1
+        with:
+          name: Android-CI-CD
+          path: app/build/outputs/apk/debug/app-debug.apk
+
+      - name: Generate app bundle.
+        run: ./gradlew app:bundleRelease --stacktrace
+
+      - name: Sign app bundle
+        uses: r0adkll/sign-android-release@v1
+        id: sign_app
+        with:
+          releaseDirectory: app/build/outputs/bundle/release
+          signingKeyBase64: ${{ secrets.SIGNING_KEY }}
+          alias: ${{ secrets.ALIAS }}
+          keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+          keyPassword: ${{ secrets.KEY_PASSWORD }}
+
