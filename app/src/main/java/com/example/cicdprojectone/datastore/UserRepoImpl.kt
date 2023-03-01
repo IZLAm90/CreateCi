@@ -25,7 +25,8 @@ class UserRepoImpl(private val prefsDataStore: DataStore<Preferences>):UserRepoS
                 throw exception
             }
         }.map { preferences ->
-            islam(name = preferences[PreferenceKeys.UserName] ?: "", title = preferences[PreferenceKeys.UserTitle]?:"")
+            islam(name = preferences[PreferenceKeys.UserName] ?: "",
+                title = preferences[PreferenceKeys.UserTitle]?:"")
         }
     }
 }

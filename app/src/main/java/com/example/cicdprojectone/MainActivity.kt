@@ -16,6 +16,7 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -37,6 +38,7 @@ import com.example.cicdprojectone.datastore.UserRepoImpl
 import com.example.cicdprojectone.datastore.UserRepoStore
 import com.example.cicdprojectone.datastore.islam
 import com.example.cicdprojectone.ui.theme.CiCdProjectOneTheme
+import com.google.android.material.textfield.TextInputEditText
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
@@ -44,10 +46,8 @@ import kotlinx.coroutines.withContext
 
 class MainActivity : ComponentActivity() {
     private val PREFERENCES_NAME_USER =  "sample_datastore_prefs"
-    private val Context.prefsDataStore by preferencesDataStore(
-        name = PREFERENCES_NAME_USER)
+    private val Context.prefsDataStore by preferencesDataStore(name = PREFERENCES_NAME_USER)
     var userRepo : UserRepoStore ?=null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -57,7 +57,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    ClickBtb()
+//                    ClickBtb()
+                    val scope= rememberCoroutineScope()
+                    expandableCard()
                 }
             }
         }
@@ -204,10 +206,9 @@ fun ScaffoldWithTopBar() {
 @Composable
 fun DefaultPreview() {
     CiCdProjectOneTheme {
+        expandableCard()
 //        ScaffoldWithTopBar()
-        ClickBtb()
+//        ClickBtb()
     }
-
-
 }
 }

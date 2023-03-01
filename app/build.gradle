@@ -20,10 +20,24 @@ android {
         }
     }
 
+    signingConfigs {
+        release {
+            storeFile file("islam.jks")
+            storePassword 'islam0'
+            keyAlias 'islam'
+            keyPassword 'islam0'
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        android.applicationVariants.all { variant ->
+            variant.outputs.all {
+                outputFileName = " app name - ${variant.buildType.name}-v${variant.versionCode}-N${variant.versionName}.apk"
+            }
         }
     }
     compileOptions {
