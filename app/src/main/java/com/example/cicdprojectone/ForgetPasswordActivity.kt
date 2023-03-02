@@ -49,6 +49,7 @@ class ForgetPasswordActivity : ComponentActivity() {
                 contentScale = ContentScale.FillWidth,
                 contentDescription = "AppLogo")
             Text(text ="islam",Modifier.fillMaxWidth())
+            Text(text ="islam",Modifier.fillMaxWidth())
         }
     }
 
