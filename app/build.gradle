@@ -34,11 +34,11 @@ android {
             signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
-        android.applicationVariants.all { variant ->
-            variant.outputs.all {
-                outputFileName = " app name - ${variant.buildType.name}-v${variant.versionCode}-N${variant.versionName}.apk"
-            }
-        }
+//        android.applicationVariants.all { variant ->
+//            variant.outputs.all {
+//                outputFileName = " app name - ${variant.buildType.name}-v${variant.versionCode}-N${variant.versionName}.apk"
+//            }
+//        }
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
