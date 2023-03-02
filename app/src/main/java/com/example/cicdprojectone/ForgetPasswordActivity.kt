@@ -8,6 +8,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -47,6 +48,7 @@ class ForgetPasswordActivity : ComponentActivity() {
                     .height(150.dp),
                 contentScale = ContentScale.FillWidth,
                 contentDescription = "AppLogo")
+            Text(text ="islam",Modifier.fillMaxWidth())
         }
     }
 
