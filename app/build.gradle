@@ -24,7 +24,7 @@ android {
         release {
             storeFile file("islam.jks")
             storePassword 'islam0'
-            keyAlias 'islam'
+            keyAlias 'key0'
             keyPassword 'islam0'
         }
     }
