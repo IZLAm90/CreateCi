@@ -22,7 +22,7 @@ android {
 
     signingConfigs {
         release {
-            storeFile file("islam.jks")
+            storeFile file("key.jks")
             storePassword 'islam0'
             keyAlias 'key0'
             keyPassword 'islam0'
