@@ -64,6 +64,8 @@ class ForgetPasswordActivity : ComponentActivity() {
             Text(text ="islam",Modifier.fillMaxWidth())
             Text(text ="islam",Modifier.fillMaxWidth())
             Text(text ="islam",Modifier.fillMaxWidth())
+            Text(text ="islam",Modifier.fillMaxWidth())
+            Text(text ="islam",Modifier.fillMaxWidth())
         }
     }
 
