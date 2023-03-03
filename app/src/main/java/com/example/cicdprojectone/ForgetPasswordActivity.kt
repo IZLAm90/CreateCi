@@ -50,6 +50,20 @@ class ForgetPasswordActivity : ComponentActivity() {
                 contentDescription = "AppLogo")
             Text(text ="islam",Modifier.fillMaxWidth())
             Text(text ="islam",Modifier.fillMaxWidth())
+            Text(text ="islam",Modifier.fillMaxWidth())
+            Text(text ="islam",Modifier.fillMaxWidth())
+            Text(text ="islam",Modifier.fillMaxWidth())
+            Text(text ="islam",Modifier.fillMaxWidth())
+            Text(text ="islam",Modifier.fillMaxWidth())
+            Text(text ="islam",Modifier.fillMaxWidth())
+            Text(text ="islam",Modifier.fillMaxWidth())
+            Text(text ="islam",Modifier.fillMaxWidth())
+            Text(text ="islam",Modifier.fillMaxWidth())
+            Text(text ="islam",Modifier.fillMaxWidth())
+            Text(text ="islam",Modifier.fillMaxWidth())
+            Text(text ="islam",Modifier.fillMaxWidth())
+            Text(text ="islam",Modifier.fillMaxWidth())
+            Text(text ="islam",Modifier.fillMaxWidth())
         }
     }
 
